@@ -65,11 +65,15 @@
        .grupo {
             display: flex;
             animation: spin 40s infinite linear;
+            flex-shrink: 0;
         }
 
         .grupo img {
+            width: 115vw;
+            height: 600px;
             object-fit: cover;
             object-position: center;
+            flex-shrink: 0;
         }
 
         .carrossel a {
@@ -79,7 +83,7 @@
 
         @keyframes spin {
             from { transform: translateX(0); }
-            to { transform: translateX(-500vw); }
+            to { transform: translateX(-100%); }
         }
 
         .containerCards {
@@ -119,14 +123,25 @@
             background-color: #F0D9BB;
             align-items: center; 
             justify-content: center;
-            height: 20px;        
+            height: 20px;     
+            color: #44302b; 
+            font-size: 0.8rem;  
         }
        
-        footer{
+        .informacoesFooter{
             display: flex;
             align-items: center;
             gap: 120px;
-            border-top: 2px solid black;
+            border-top: 2px solid #DAD4D0;
+        }
+
+        .informacoesFooter a {
+            text-decoration: none;
+            color: #44302b;
+        }
+
+        .informacoesFooter h3 {
+            color: #44302b;
         }
 
         @media (max-width: 768px) {
@@ -150,6 +165,8 @@
 
             .grupo img {
                 height: 250px;
+                width: 248vw;
+                object-fit: contain;
             }
 
             .bannerSorvetes img{
@@ -169,7 +186,7 @@
                 padding-left: 30px;
             }
 
-            footer{
+            .informacoesFooter{
                 flex-direction: column;
                 align-items: flex-start;
                 padding: 16px;
@@ -181,6 +198,7 @@
             }
         }
     </style>
+    
 </head>
 <body>
     <header>
@@ -236,11 +254,11 @@
 
     </main>
     <footer>
-        <img class="logoFooter" src="imagem.png" alt="logo">
+        <div class="informacoesFooter">
+            <img class="logoFooter" src="imagem.png" alt="logo">     
         <div>
             <h3>Lojas físicas:</h3>
-            <p>Rua Salvador Branco de Andrade, 182 - Jardim Sao Miguel, Taboão da Serra - SP, 06760-100</p>
-            <p> </p>
+            <a href="https://www.google.com/maps/place/Rua+Salvador+Branco+de+Andrade,+182+-+Jardim+Sao+Miguel,+Tabo%C3%A3o+da+Serra+-+SP,+06760-100/data=!4m2!3m1!1s0x94ce5442299ce597:0x3faf93b07f4fc5b4?sa=X&ved=1t:242&ictx=111" target="_blank">Rua Salvador Branco de Andrade, 182 - Jardim Sao Miguel, Taboão da Serra - SP, 06760-100</a>
             <P>09:00 às 20:00 - Segunda a Sábado;
 12:00 às 20:00 - Domingos e feriados</P>
         </div>     
@@ -252,12 +270,19 @@ Políticas</p>
 <p>Fale Conosco</p>
         </div>
         <div>
-            <p>Políticas de Cookies</p>
-            <p>Políticas de Privacidade</p>
-            <p>Proteção de Marcas</p>
-            <p>Código de Defesa do Consumidor</p>
+            <a href="https://www.mpf.mp.br/servicos/lgpd/politicas/privacidade/politica-de-cookies" target="_blank">Políticas de Cookies</a>
+            <p></p>
+            <a href="https://www.gov.br/mdh/pt-br/acesso-a-informacao/politica-de-privacidade" target="_blank">Políticas de Privacidade</a>
+            <p></p>
+            <a href="https://www.gov.br/inpi/pt-br" target="_blank">Proteção de Marcas</a>
+            <p></p>
+            <a href="https://www.planalto.gov.br/ccivil_03/leis/l8078compilado.htm" target="_blank">Código de Defesa do Consumidor</a>
             <p>Trabalhe Conosco</p>
         </div>
+
+
+        </div>
+        
     </footer>
     <section id="idFooter" class="finalDireitos">
            <p><b>2026 - Ma’Vie Gelatos é uma marca registrada de Grupo MaVie Gelatos ltda, todos os direitos reservados ©</b></p>

@@ -52,6 +52,13 @@
         .bannerSorvetes img{
             height: auto;
             width: 100%;
+            position: relative;
+        }
+
+        .bannerSorvetes h1{
+            position: absolute;
+            top: 1490px;
+            visibility: hidden;
         }
 
         
@@ -106,6 +113,10 @@
 
         .imgQuemSomos img{
             height: auto;
+            width: 100%;
+        }
+
+        .sectionCards{
             width: 100%;
         }
 
@@ -170,6 +181,10 @@
             .bannerSorvetes img{
                 height: 220px;
                 width: 100%;
+            }
+
+            .bannerSorvetes h1{
+                top: 730px;
             }
 
             .containerCards{

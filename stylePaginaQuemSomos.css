@@ -1,0 +1,175 @@
+body{
+            margin: 0;
+            background-color: #F8F0EC;
+            overflow-x: hidden;
+            width: 100%;
+        }
+
+        header {
+            padding: 16px 32px;
+            background-color:#FAEEE5;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .navCabecalho{
+            display: flex;
+            justify-content: center;
+            align-items: center;            
+            gap: 50px;
+        }
+
+        .navCabecalho ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            gap: 90px;
+        }
+
+        .navCabecalho a {
+                text-decoration: none;
+                color: #64463F;
+                font-size: 1.5rem;
+            }
+
+        .imagemLogo{
+            width: 220px;
+            height: auto;
+        }
+        
+        .primeiraImagem{
+            display: flex;
+            height: auto; 
+            gap: 50px;
+            background-color: #ECDDCC;
+        }
+
+        .primeiraImagem img{
+            flex: 2;
+            object-fit: cover;
+            min-width: 0;
+            width: 0;
+        }
+
+        .textoHisstoria {
+            flex: 1;
+            padding: 40px;
+            padding-left: 80px;
+        }
+
+        .textoHisstoria p {
+            font-size: 24px;
+            color: #5B4731;
+        }
+
+        .bannerSorvetes img{
+            height: auto;
+            width: 100%;
+        }
+
+
+        .bannerSorvetes2 img{
+            height: auto;
+            width: 100%;
+        }
+
+        
+        .logoFooter{
+            display: block;
+            width: 320px;
+            height: auto;
+        }
+
+        .finalDireitos{
+            display:flex;
+            margin-top: 1%;
+            background-color: #44302b;
+            align-items: center; 
+            justify-content: center;
+            height: 20px;     
+            color: #F0D9BB; 
+            font-size: 0.8rem;  
+        }
+       
+        .informacoesFooter{
+            display: flex;
+            align-items: center;
+            gap: 120px;
+            border-top: 2px solid #DAD4D0;
+        }
+
+        .informacoesFooter a {
+            text-decoration: none;
+            color: #44302b;
+        }
+
+        .informacoesFooter h3 {
+            color: #44302b;
+        }
+
+/* Configurações Responsividade para Mobile */
+
+        @media (max-width: 768px) {
+            .navCabecalho{
+                flex-direction: column;
+                gap: 16px;
+            }
+
+            .navCabecalho ul {
+                justify-content: center;
+            }
+
+            .imagemLogo{
+                padding-left: 0;
+            }
+
+            .primeiraImagem {
+                flex-direction: column;
+            }
+
+            .primeiraImagem img {
+                width: 100%;
+                min-width: 100%;
+                height: 250px;
+            }
+
+            .textoHisstoria {
+                padding: 20px;
+            }
+
+            .textoHisstoria p {
+                font-size: 16px;
+            }
+
+            .bannerSorvetes img{
+                height: 220px;
+                width: 100%;
+            }
+
+
+            header{
+                position: static;
+            }
+
+            .bannerSorvetes2 img{
+            height: 220px;
+            width: 100vw;
+        }
+
+            .logoFooter{
+                padding-left: 30px;
+            }
+
+            .informacoesFooter{
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 16px;
+                gap: 20px;
+            }
+
+            .finalDireitos{
+                height: 50px;
+            }
+        }

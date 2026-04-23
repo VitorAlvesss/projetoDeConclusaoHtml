@@ -64,7 +64,7 @@
         
        .grupo {
             display: flex;
-            animation: spin 40s infinite linear;
+            animation: spin 25s infinite ease-in-out;
             flex-shrink: 0;
         }
 
@@ -76,14 +76,38 @@
             flex-shrink: 0;
         }
 
-        .carrossel a {
-            display:block;
-        }
-
 
         @keyframes spin {
             from { transform: translateX(0); }
             to { transform: translateX(-100%); }
+
+            0%, 15% {
+                transform: translateX(0);
+            }
+
+            20%, 35% {
+                transform: translateX(-20%);
+            }
+
+            40%, 55% {
+                transform: translateX(-40%);
+            }
+
+            60%, 75% {
+                transform: translateX(-60%);
+            }
+
+            80%, 95% {
+                transform: translateX(-80%);
+            }
+
+            100% {
+                transform: translateX(-100%)
+            }
+
+
+
+
         }
 
         .containerCards {
@@ -111,13 +135,23 @@
             margin: 0 auto;
         }
 
+        
         .imgQuemSomos img{
             height: auto;
             width: 100%;
+            margin-top: 1%;
         }
 
         .sectionCards{
             width: 100%;
+        }
+
+        .sectionCards a{
+            display: block;
+            margin-top: 1%;
+            text-align: center;
+            text-decoration: none;
+            color: #64463F;
         }
 
         .logoFooter{
@@ -187,6 +221,10 @@
                 top: 730px;
             }
 
+            .sectionCards a{
+                font-size: 0.8em;        
+            }
+
             .containerCards{
                 grid-template-columns: repeat(1, 1fr);
             }
@@ -200,7 +238,7 @@
             }
 
             .imgQuemSomos img{
-                height: 220px;
+                height: 250px;
             }
 
             .informacoesFooter{

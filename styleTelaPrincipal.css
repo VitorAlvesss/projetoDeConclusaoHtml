@@ -69,18 +69,15 @@
         }
 
         .grupo img {
-            width: 130vw;
+            width: 100vw;
             height: auto;
+            aspect-ratio: 1920 /800;;
             object-fit: cover;
-            /* object-position: center; */
             flex-shrink: 0;
         }
 
 
         @keyframes spin {
-            from { transform: translateX(0); }
-            to { transform: translateX(-100%); }
-
             0%, 15% {
                 transform: translateX(0);
             }
@@ -104,10 +101,6 @@
             100% {
                 transform: translateX(-100%)
             }
-
-
-
-
         }
 
         .containerCards {
@@ -207,10 +200,8 @@
             }
 
             .grupo img {
-                height: auto;
-                width: 248vw;
-                object-fit: contain;
-            }
+                aspect-ratio: 768 / 576;
+           }
 
             .bannerSorvetes img{
                 height: 220px;

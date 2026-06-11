@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ma'Vie - Fale Conosco</title>
+    <link rel="stylesheet" type="text/css" href="stylePaginaContato.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navCabecalho">
+            <ul>
+                <li><a href="projetoConclusaoHtml.html" targe="_blank">Tela Principal</a></li>
+            </ul>  
+            <img class="imagemLogo" src="imagensLogo/imagem.png" alt="logo">   
+            <ul>
+                <li><a href="pag_quemSomos.html" targe="_blank">Quem somos</a></li>
+            </ul>    
+        </nav>
+    </header>
+    <main>
+
+        <section class="textosDeContato">
+            <h2 id="direcionarContato" class="tituloFale">Fale Conosco</h2>
+            <p class="txtEntrarContato">Entre em contato com a Gelateria Ma'Vie</p>
+        </section>
+
+        <!-- DROPDOWN para tipos de contatos -->
+         <section class="faleConosco">
+            <div class="container-sac">
+                <form class="form-grid" id='formularioContato'>
+                    <select id="assunto" class="input-field select-header" required>
+                        <option value="" disabled selected>SAC - Serviço de Atendimento ao Cliente</option>
+                        <option value="Sugestão">Sugestão</option>
+                        <option value="Reclamações">Reclamações</option>
+                        <option value="Dúvidas">Dúvidas</option>
+                        <option value="Elogios">Elogios</option>
+                        <option value="Outros">Outros</option>
+                    </select>
+                
+                    <input type="text" id="nome" class="input-field" placeholder="Nome" required>
+                    <input type="email" id="email" class="input-field" placeholder="E-mail" required>
+                
+                    <textarea id="mensagem" class="input-field textarea" placeholder="Mensagem"></textarea>                
+                
+                    <label class="privacy-policy">
+                        <input type="checkbox" id="privacidade" required>
+                        <span>Declaro que li e concordo com a Política de Privacidade.</span>
+                    </label>
+                
+                    <button type="submit" class="botaoEnviar" id="submitButton">Enviar</button>
+                </form>
+            </div>
+        </section>                
+    </main>
+
+    <!-- Igual para todas as páginas -->
+    <footer>
+        <div class="informacoesFooter">
+            <img class="logoFooter" src="imagensLogo/imagem.png" alt="logo">     
+        <div>
+            <h3>Lojas físicas:</h3>
+            <a href="https://www.google.com/maps/place/Rua+Salvador+Branco+de+Andrade,+182+-+Jardim+Sao+Miguel,+Tabo%C3%A3o+da+Serra+-+SP,+06760-100/data=!4m2!3m1!1s0x94ce5442299ce597:0x3faf93b07f4fc5b4?sa=X&ved=1t:242&ictx=111" target="_blank">Rua Salvador Branco de Andrade, 182 - Jardim Sao Miguel, Taboão da Serra - SP, 06760-100</a>
+            <P>09:00 às 20:00 - Segunda a Sábado;
+12:00 às 20:00 - Domingos e feriados</P>
+        </div>     
+        <div>
+            <h3>Sobre Ma’Vie</h3>
+            <p>Sobre Ma’Vie Gelatos
+Parceiros
+Políticas</p>
+<p>Fale Conosco</p>
+        </div>
+        <div>
+            <a href="https://www.mpf.mp.br/servicos/lgpd/politicas/privacidade/politica-de-cookies" target="_blank">Políticas de Cookies</a>
+            <p></p>
+            <a href="https://www.gov.br/mdh/pt-br/acesso-a-informacao/politica-de-privacidade" target="_blank">Políticas de Privacidade</a>
+            <p></p>
+            <a href="https://www.gov.br/inpi/pt-br" target="_blank">Proteção de Marcas</a>
+            <p></p>
+            <a href="https://www.planalto.gov.br/ccivil_03/leis/l8078compilado.htm" target="_blank">Código de Defesa do Consumidor</a>
+            <p>Trabalhe Conosco</p>
+        </div>
+
+
+        </div>
+        
+    </footer>
+    <section class="finalDireitos">
+           <p><b>2026 - Ma’Vie Gelatos é uma marca registrada de Grupo MaVie Gelatos ltda, todos os direitos reservados ©</b></p>
+        </section>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+        emailjs.init({ publicKey: "publicKeyAqui" });
+    </script>
+    <script src="envioDeEmail.js"></script>
+
+    
+</body>
+</html>

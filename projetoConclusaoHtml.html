@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ma'Vie Gelateria</title>
+    <link rel="stylesheet" type="text/css" href="styleTelaPrincipal.css">
+    <script src="view/atualizarNome.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <nav class="navCabecalho">
+            <ul>
+                <li><a href="#">Início</a></li>
+                <li><a href="#sabores">Sabores</a></li>
+                <li><a href="pag_quemSomos.html" targe="_blank">Quem somos</a></li>
+            </ul>  
+            <img class="imagemLogo" src="imagensLogo/imagem.png" alt="logo">   
+            <ul>
+                
+                <li><a href="pag_faleConosco.html" targe="_blank">Contato</a></li>
+                <li><a  id="linhaCadastro" href="telaLogin.html" targe="_blank">Login ou cadastro</a></li>
+                <li><a id="mudarNome" class="esconder" href="telaPerfil.html" targe="_blank">Perfil</a></li>
+                <!-- <li><a href="#" targe="_blank"></a></li> -->
+                
+            </ul>    
+        </nav>
+    </header>
+    <main>
+        <div class="carrossel">
+            <div class="grupo">
+                <picture>
+                    <source media="(max-width: 768px)" srcset="imagensCarrossel/imagem1mobile.png">
+                    <img src="imagensCarrossel/imagem1.png" alt="sabor 1">
+                </picture>
+                <picture>
+                    <source media="(max-width: 768px)" srcset="imagensCarrossel/imagem2mobile.png">
+                    <img src="imagensCarrossel/imagem2.png" alt="sabor 2">
+                </picture>
+                <picture>
+                    <source media="(max-width: 768px)" srcset="imagensCarrossel/imagem3mobile.png">
+                    <img src="imagensCarrossel/imagem3.png" alt="sabor 3">
+                </picture>
+                <picture>
+                    <source media="(max-width: 768px)" srcset="imagensCarrossel/imagem4mobile.png">
+                    <img src="imagensCarrossel/imagem4.png" alt="sabor 4">
+                </picture>               
+                <picture>
+                    <source media="(max-width: 768px)" srcset="imagensCarrossel/imagem5mobile.jpg">
+                    <img src="imagensCarrossel/imagem5.png" alt="sabor 5">
+                </picture>
+            </div>
+            <div aria-hidden class="grupo">
+                <picture>
+                    <source media="(max-width: 768px)" srcset="imagensCarrossel/imagem1mobile.png">
+                    <img src="imagensCarrossel/imagem1.png" alt="sabor 1">
+                </picture>
+                <picture>
+                    <source media="(max-width: 768px)" srcset="imagensCarrossel/imagem2mobile.png">
+                    <img src="imagensCarrossel/imagem2.png" alt="sabor 2">
+                </picture>
+                <picture>
+                    <source media="(max-width: 768px)" srcset="imagensCarrossel/imagem3mobile.png">
+                    <img src="imagensCarrossel/imagem3.png" alt="sabor 3">
+                </picture>
+                <picture>
+                    <source media="(max-width: 768px)" srcset="imagensCarrossel/imagem4mobile.png">
+                    <img src="imagensCarrossel/imagem4.png" alt="sabor 4">
+                </picture>
+                <picture>
+                    <source media="(max-width: 768px)" srcset="imagensCarrossel/imagem5mobile.jpg">
+                    <img src="imagensCarrossel/imagem5.png" alt="sabor 5">
+                </picture>
+            </div>           
+        </div>
+
+        <section class="bannerSorvetes">
+            <picture> 
+                <source media="(max-width: 768px)" srcset="imagensBanners/bannerSaboresMobile.png">
+                <img src="imagensBanners/bannerSabores.png" alt="sabores">
+            </picture>
+            
+            <h1 id="sabores">ANCORA SABORES</h1>
+        </section>
+
+        <section class="sectionCards">
+            <h2 class="tituloSabores">Nossos sabores</h2>
+            <p class="textoReceita">Descubra nossas receitas artesanais.</p>
+            
+            <div class="containerCards">
+                <img src="cards_sabores/cardSabor1.png" alt="Creme de avelã">
+                <img src="cards_sabores/cardSabor2.png" alt="Frutas vermelhas">
+                <img src="cards_sabores/cardSabor3.png" alt="Caramelo salgado">
+                <img src="cards_sabores/cardSabor4.jpg" alt="Strawberry cheesecake">
+                <img src="cards_sabores/cardSabor5.png" alt="Chocolate belga">
+                <img src="cards_sabores/cardSabor6.png" alt="Menta com chocolate">
+                <img src="cards_sabores/cardSabor7.png" alt="Cookie n'cream">
+                <img src="cards_sabores/cardSabor8.png" alt="Fior di latte">
+            </div>
+        </section>
+
+        <section class="sectionDark">
+                <div class="conteudoDark">
+                    <h2>Ma'Vie Dark</h2>
+                    <p>Intensidade, profundidade e prazer<br>em sua forma mais sofisticada.</p>
+                    <a href="telaDark.html" class="btn-dourado">Explorar Sabores</a>
+                </div>
+        </section>
+
+        <section class="sectionPremium">
+            <h2 class="tituloSabores">Ma'Vie Premium</h2>
+            <p class="textoReceita">Descubra nossas receitas artesanais.</p>
+            
+            <!-- Cards de Sorvetes Premium -->
+            <div class="containerCards">
+                <img src="cards_sabores/blueberry_premium.png" alt="Gelato Premium Blueberry">
+                <img src="cards_sabores/cereja_premium.png" alt="Gelato Premium Cereja Amarena">
+                <img src="cards_sabores/nozes_premium.png" alt="Gelato Premium Nozes Caramelizadas">
+                <img src="cards_sabores/pistache_premium.png" alt="Gelato Premium Pistache Puro">
+            </div>
+        </section>
+
+        <section class="imgQuemSomos">
+            <picture>
+                <source media="(max-width: 768px)" srcset="imagensBanners/bannerQmSomosMobile.png">
+                <img src="imagensBanners/bannerQmSomos.png" alt="Quem somos">
+            </picture>
+            
+
+        </section>
+
+    </main>
+    <footer>
+        <div class="informacoesFooter">
+            <img class="logoFooter" src="imagensLogo/imagem.png" alt="logo">     
+        <div>
+            <h3>Lojas físicas:</h3>
+            <a href="https://www.google.com/maps/place/Rua+Salvador+Branco+de+Andrade,+182+-+Jardim+Sao+Miguel,+Tabo%C3%A3o+da+Serra+-+SP,+06760-100/data=!4m2!3m1!1s0x94ce5442299ce597:0x3faf93b07f4fc5b4?sa=X&ved=1t:242&ictx=111" target="_blank">Rua Salvador Branco de Andrade, 182 - Jardim Sao Miguel, Taboão da Serra - SP, 06760-100</a>
+            <P>09:00 às 20:00 - Segunda a Sábado;
+12:00 às 20:00 - Domingos e feriados</P>
+        </div>     
+        <div>
+            <h3>Sobre Ma’Vie</h3>
+            <a href="pag_quemSomos.html" targe="_blank">Sobre Ma’Vie Gelatos</a>
+            <p> </p>
+            <a href="pag_faleConosco 1.html" targe="_blank">Fale Conosco</a>
+        </div>
+        <div>
+            <a href="https://www.mpf.mp.br/servicos/lgpd/politicas/privacidade/politica-de-cookies" target="_blank">Políticas de Cookies</a>
+            <p></p>
+            <a href="https://www.gov.br/mdh/pt-br/acesso-a-informacao/politica-de-privacidade" target="_blank">Políticas de Privacidade</a>
+            <p></p>
+            <a href="https://www.gov.br/inpi/pt-br" target="_blank">Proteção de Marcas</a>
+            <p></p>
+            <a href="https://www.planalto.gov.br/ccivil_03/leis/l8078compilado.htm" target="_blank">Código de Defesa do Consumidor</a>
+        </div>
+
+
+        </div>
+        
+    </footer>
+    <section class="finalDireitos">
+           <p><b>2026 - Ma’Vie Gelatos é uma marca registrada de Grupo MaVie Gelatos ltda, todos os direitos reservados ©</b></p>
+        </section>
+</body>
+</html>

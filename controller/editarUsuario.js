@@ -25,8 +25,12 @@ btnSalvar.addEventListener("click", () =>{
                 nome: nomeModal.value,
                 email: emailModal.value
             })
+        })
+        .then(response => response.json())
+        .then(dados => {
+            mensagemNaTelaPositiva("Dados atualizados com sucesso.");
+            modal.close();
+            listarUsuarios();
         });
-        mensagemNaTelaPositiva("Dados atualizados com sucesso.");
-        listarUsuarios();
     }
 });

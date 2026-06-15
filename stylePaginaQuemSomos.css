@@ -108,6 +108,12 @@ body{
             height: auto;
         }
 
+        .logoFooter{
+            display: block;
+            width: 320px;
+            height: auto;
+        }
+
         .finalDireitos{
             display:flex;
             margin-top: 1%;
@@ -133,6 +139,11 @@ body{
 
         .informacoesFooter h3 {
             color: #44302b;
+        }
+        
+
+        .informacoesFooter a:hover {
+            color: #B8860B; 
         }
 
 /* Configurações Responsividade para Mobile */

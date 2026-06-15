@@ -10,7 +10,7 @@ function listarUsuarios() {
             dados.forEach(usuario => {
                 corpoTabela.appendChild(criaLinhaUsuario(usuario));
             });
-        });
+        });      
 };
 
 

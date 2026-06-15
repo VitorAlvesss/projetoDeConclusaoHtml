@@ -1,6 +1,7 @@
 
 const botaoSalvarUsuario = document.getElementById("btnSalvarUsuario");
 const formulario = document.getElementById("formUsuarios")
+const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 botaoSalvarUsuario.addEventListener("click", (event) =>{
     event.preventDefault();
@@ -50,6 +51,12 @@ function validandoUsuario(usuario){
         mensagemNaTela("CPF inválido! Tente novamente.")
         return false
     }
+
+    if(!regexEmail.test(usuario.email)){
+        mensagemNaTela("Email inválido!");
+        return false;
+    }
+
     return true;   
 }
 

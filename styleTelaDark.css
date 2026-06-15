@@ -120,6 +120,11 @@
             border-radius: 12px;
         }
 
+        .sectionCards .containerCards img:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 24px rgba(100, 70, 63, 0.15);
+        }
+
         .tituloSabores{
             text-align: center;
             color: #F8F0EC;
@@ -167,11 +172,21 @@
 
         .informacoesFooter a {
             text-decoration: none;
-            color: #F8F0EC;
+            color: #e3d8d5;
         }
 
-        .informacoesFooter h3, p {
-            color: #F8F0EC;
+        .informacoesFooter h3 {
+            color: #ffffff;
+        }
+        
+
+
+        .informacoesFooter a:hover {
+            color: #B8860B; 
+        }
+
+        footer p{
+          color: #e3d8d5; 
         }
 
         @media (max-width: 768px) {
@@ -194,10 +209,8 @@
             }
 
             .grupo img {
-                height: auto;
-                width: 248vw;
-                object-fit: contain;
-            }
+                aspect-ratio: 768 / 576;
+           }
 
             .bannerSorvetes img{
                 height: 290px;

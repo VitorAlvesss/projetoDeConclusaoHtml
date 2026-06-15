@@ -1,15 +1,16 @@
-document.addEventListener("DOMContentLoaded", () =>{
+document.addEventListener("DOMContentLoaded", () => {
     const nome = sessionStorage.getItem("nomeUsuario");
     if(nome != null){
-        nomeDoUsuarioNaPagina(nome); 
-        const perfil = document.getElementById("mudarNome");
-        const cadastro = document.getElementById("linhaCadastro");
-        perfil.classList.remove("esconder");
-        cadastro.classList.add("esconder");
+        const perfis = document.querySelectorAll(".mudarNome");
+        const cadastros = document.querySelectorAll(".linhaCadastro");
+
+        perfis.forEach(perfil => {
+            perfil.textContent = "Olá, " + nome + "! Acesse seu perfil aqui!";
+            perfil.classList.remove("esconder");
+        });
+
+        cadastros.forEach(cadastro => {
+            cadastro.classList.add("esconder");
+        });
     }
 });
-
-function nomeDoUsuarioNaPagina(nome){
-    const setandoNome = document.getElementById("mudarNome");
-    setandoNome.textContent = "Olá, "+nome+"!" +" Acesse seu perfil aqui!";
-}

@@ -22,7 +22,7 @@ btnEntrar.addEventListener("click", (event) =>{
                     sessionStorage.setItem("nomeUsuario", dados.nome)
                     sessionStorage.setItem("permissaoUsuario", dados.permissao)
                     sessionStorage.setItem("idUsuario", dados.id);
-                    window.location.href = "projetoConclusaoHtml.html"                 
+                    window.location.href = "projetoConclusaoHtml.html"               
                 }, 2000);
             }
             else{

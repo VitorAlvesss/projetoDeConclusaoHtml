@@ -40,6 +40,14 @@
             height: auto;
             padding-left: 65px;
         }
+
+        .mobile-menu-icon{
+            display: none;
+        }
+
+        .mobile-menu{
+            display: none;
+        }
         
         .carrossel{
             width: 100%;
@@ -144,6 +152,10 @@
         }
 
         .esconder{
+            display: none;
+        }
+
+        .esconderMobile{
             display: none;
         }
 
@@ -295,11 +307,49 @@
             }
 
             .navCabecalho ul {
-                justify-content: center;
+                display: none;
             }
 
             .imagemLogo{
                 padding-left: 0;
+            }
+
+            .mobile-menu-icon{
+                display: block;
+            }
+
+            .mobile-menu-icon button{
+                background-color: transparent;
+                border: none;
+                cursor: pointer;
+            }
+
+            .mobile-menu ul{
+                display: flex;
+                flex-direction: column;
+                text-align: left;
+                padding: 0;
+                gap: 10px
+                /* padding-bottom: 1rem; */
+            }
+            
+
+            .mobile-menu .navMobile{
+                padding-top: 1.2rem;
+            }
+
+            .navMobile li{
+                list-style: none;
+            }
+
+            .navMobile a{
+                text-decoration: none;
+                color: #64463F;
+                font-size: 1.5rem
+            }
+
+            .open{
+                display: block;
             }
 
 
@@ -325,10 +375,6 @@
 
             .containerCards{
                 grid-template-columns: repeat(1, 1fr);
-            }
-
-            header{
-                position: static;
             }
 
             .sectionDark {

@@ -4,7 +4,7 @@ document.getElementById('formularioContato').addEventListener('submit', function
     const mudarTextoBotao = document.getElementById('submitButton');
     mudarTextoBotao.textContent = "Enviando...";
 
-    emailjs.send('serviceAqui', 'templateAqui', {
+    emailjs.send('service_r37mn9j', 'template_qudw1q7', {
        title: document.getElementById('assunto').value,
        name: document.getElementById('nome').value,
        email: document.getElementById('email').value,

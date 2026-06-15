@@ -10,7 +10,7 @@ botaoSalvarUsuario.addEventListener("click", (event) =>{
         return;
     }
     else{
-        fetch("${BASE_URL}usuarios", {
+        fetch(`${BASE_URL}usuarios`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

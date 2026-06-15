@@ -4,7 +4,7 @@ const corpoTabela = document.getElementById("corpoTabela");
 
 function listarUsuarios() {
     corpoTabela.innerHTML = "";
-    fetch("http://localhost:3000/usuarios")
+    fetch(`${BASE_URL}usuarios`)
         .then(response => response.json())
         .then(dados => {
             dados.forEach(usuario => {

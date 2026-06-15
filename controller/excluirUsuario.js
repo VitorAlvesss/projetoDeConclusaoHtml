@@ -1,6 +1,6 @@
 
 function excluirUsuario(id) {
-    fetch(`http://localhost:3000/usuarios/${id}`, {
+    fetch(`${BASE_URL}usuarios/${id}`, {
         method: "DELETE"
     })
     .then(response => response.json())

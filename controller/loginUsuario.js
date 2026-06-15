@@ -5,7 +5,7 @@ btnEntrar.addEventListener("click", (event) =>{
     event.preventDefault();
     const usuario = obtendoDadosUsuarioLogin(formulario);
 
-    fetch("http://localhost:3000/usuarios/login", {
+    fetch("${BASE_URL}usuarios/login", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"

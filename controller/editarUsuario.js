@@ -16,7 +16,7 @@ btnSalvar.addEventListener("click", () =>{
         return;
     }
     else{
-        fetch(`http://localhost:3000/usuarios/${modal.dataset.id}`, {
+        fetch(`${BASE_URL}usuarios/${modal.dataset.id}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json"

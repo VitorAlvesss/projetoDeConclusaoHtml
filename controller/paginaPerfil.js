@@ -4,7 +4,7 @@ const btnBotaoAtualizarSenha = document.getElementById("btnAtualizarSenha")
 const formulario = document.getElementById("formUsuariosAtualizar");
 
 document.addEventListener("DOMContentLoaded", () =>{
-    fetch(`http://localhost:3000/usuarios/${sessionStorage.getItem("idUsuario")}`)
+    fetch(`${BASE_URL}usuarios/${sessionStorage.getItem("idUsuario")}`)
         .then(response => response.json())
         .then(dados => {
             console.log(dados);
@@ -29,7 +29,7 @@ btnBotaoAtualizar.addEventListener("click", () =>{
     }
 
     if(dadosBanco.nome != formulario.nome.value || dadosBanco.email != formulario.email.value){
-        fetch(`http://localhost:3000/usuarios/${sessionStorage.getItem("idUsuario")}`, {
+        fetch(`${BASE_URL}usuarios/${sessionStorage.getItem("idUsuario")}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json"
@@ -52,7 +52,7 @@ btnBotaoAtualizarSenha.addEventListener("click", () =>{
         mensagemNaTela("A senha e a confirmação de senha não são iguais.");
     }
     else{
-        fetch(`http://localhost:3000/usuarios/senha/${sessionStorage.getItem("idUsuario")}`, {
+        fetch(`${BASE_URL}usuarios/senha/${sessionStorage.getItem("idUsuario")}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json"

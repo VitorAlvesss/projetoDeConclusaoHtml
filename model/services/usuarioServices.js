@@ -1,15 +1,32 @@
 const usuarioQuerys = require("../repositories/usuarioRepositorio.js");
-
+const bcrypt = require("bcrypt");
 exports.cadastrarUsuario = (usuario, callback) =>{
-    usuarioQuerys.inserirUsuario(usuario, (resultado) => {
-        callback(resultado);
+    bcrypt.hash(usuario.senha, 10, (erro, hash) =>{
+        if(erro){
+            throw erro;
+        }
+        usuario.senha = hash;
+        usuarioQuerys.inserirUsuario(usuario, (resultado) =>{
+            callback(resultado);
+        });
     });
 };
 
 exports.logarServices = (usuario, callback) =>{
     usuarioQuerys.logarRepositorio(usuario, (resultado) => {
-        callback(resultado);
-    })
+        if(!resultado){
+            callback(null);
+            return;
+        }
+        bcrypt.compare(usuario.senha, resultado.senha, (erro, igual) =>{
+            if(igual){
+                callback(resultado);
+            }
+            else{
+                callback(null);
+            }
+        });
+    });
 };
 
 exports.atualizarServices = (usuario, callback) =>{
@@ -20,8 +37,14 @@ exports.atualizarServices = (usuario, callback) =>{
 
 
 exports.atualizarSenhaServices = (usuario, callback) =>{
-        usuarioQuerys.atualizarSenhaRepositorio(usuario, (resultado) =>{
-            callback(resultado);
+        bcrypt.hash(usuario.senha, 10, (erro, hash) =>{
+            if(erro){
+                throw erro;
+            }
+            usuario.senha = hash;
+            usuarioQuerys.atualizarSenhaRepositorio(usuario, (resultado) =>{
+                callback(resultado);
+            });
         });
 };
 

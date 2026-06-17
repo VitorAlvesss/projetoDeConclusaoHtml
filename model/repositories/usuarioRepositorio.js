@@ -13,8 +13,8 @@ exports.inserirUsuario = (usuario, callback) =>{
 };
 
 exports.logarRepositorio = (usuario, callback) =>{
-    const sql = "SELECT id, nome, email, permissao, senha FROM tbl_usuarios WHERE email = ? AND senha = ?"
-    conexao.query(sql, [usuario.email, usuario.senha], (erro, resultado) =>{
+    const sql = "SELECT id, nome, email, permissao, senha FROM tbl_usuarios WHERE email = ?"
+    conexao.query(sql, [usuario.email], (erro, resultado) =>{
         if(erro){
             throw erro
         }

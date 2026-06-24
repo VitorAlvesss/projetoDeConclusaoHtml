@@ -195,8 +195,9 @@ body{
             }
 
             .textoHistoria2 h1 {
-                font-size: 16px;
+                font-size: 24px;
                 color: #64463F;
+                justify-content: center;
             }
 
             .bannerSorvetes img{

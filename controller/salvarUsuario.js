@@ -52,6 +52,11 @@ function validandoUsuario(usuario){
         return false
     }
 
+    if(usuario.nome.trim() == "" || usuario.email.trim() == ""  || usuario.cpf.trim() == ""  || usuario.senha.trim() == ""  || usuario.confimacaoSenha.trim() == "" ){
+        mensagemNaTela("Nenhum dos valores podem estar em branco.")
+        return false;
+    }
+
     if(!regexEmail.test(usuario.email)){
         mensagemNaTela("Email inválido!");
         return false;

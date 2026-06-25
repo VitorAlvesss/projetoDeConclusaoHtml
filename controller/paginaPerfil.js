@@ -2,6 +2,7 @@ let dadosBanco = {};
 const btnBotaoAtualizar = document.getElementById("btnAtualizar")
 const btnBotaoAtualizarSenha = document.getElementById("btnAtualizarSenha")
 const formulario = document.getElementById("formUsuariosAtualizar");
+const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 document.addEventListener("DOMContentLoaded", () =>{
     fetch(`${BASE_URL}usuarios/${sessionStorage.getItem("idUsuario")}`)
@@ -28,6 +29,11 @@ btnBotaoAtualizar.addEventListener("click", () =>{
         return;
     }
 
+    if(!regexEmail.test(formulario.email.value)){
+        mensagemNaTela("Email inválido!");
+        return;
+    }
+
     if(dadosBanco.nome != formulario.nome.value || dadosBanco.email != formulario.email.value){
         fetch(`${BASE_URL}usuarios/${sessionStorage.getItem("idUsuario")}`, {
             method: "PUT",
@@ -38,9 +44,8 @@ btnBotaoAtualizar.addEventListener("click", () =>{
                 nome: formulario.nome.value,
                 email: formulario.email.value
             })
-        });
-
-        mensagemNaTelaPositiva("Dados atualizados com sucesso!")
+        }).then(() =>
+            mensagemNaTelaPositiva("Dados atualizados com sucesso!"));    
     }
 });
 

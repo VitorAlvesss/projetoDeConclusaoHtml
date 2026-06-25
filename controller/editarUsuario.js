@@ -1,7 +1,7 @@
 const modal = document.getElementById("popup")
 const btnSalvar = document.getElementById("salvar")
 const btnFecharModal = document.getElementById("fecharModal")
-
+const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 const nomeModal = document.getElementById("nomeModal")
 const emailModal = document.getElementById("emailModal")
@@ -15,6 +15,12 @@ btnSalvar.addEventListener("click", () =>{
         mensagemNaTela("O nome e o email não podem ficar em branco.")
         return;
     }
+
+    if(!regexEmail.test(formulario.email.value)){
+        mensagemNaTela("Email inválido!");
+        return;
+    }
+
     else{
         fetch(`${BASE_URL}usuarios/${modal.dataset.id}`, {
             method: "PUT",

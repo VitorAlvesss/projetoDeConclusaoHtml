@@ -16,7 +16,7 @@ btnSalvar.addEventListener("click", () =>{
         return;
     }
 
-    if(!regexEmail.test(formulario.email.value)){
+    if(!regexEmail.test(emailModal.value)){
         mensagemNaTela("Email inválido!");
         return;
     }

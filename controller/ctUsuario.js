@@ -81,6 +81,10 @@ exports.buscarPorId = (req, res) => {
 };
 
 exports.listarUsuarios = (req, res) => {
+    if(req.headers.permissao !== "ADM"){
+        res.status(403).json({ mensagem: "Acesso negado." });
+        return;
+    }
     model.listaUsuariosServices((resultado) =>{
         if(resultado != null){
             res.status(200).json(resultado);

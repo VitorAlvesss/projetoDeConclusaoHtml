@@ -4,7 +4,11 @@ const corpoTabela = document.getElementById("corpoTabela");
 
 function listarUsuarios() {
     corpoTabela.innerHTML = "";
-    fetch(`${BASE_URL}usuarios`)
+    fetch(`${BASE_URL}usuarios`, {
+        headers: {
+            "permissao": sessionStorage.getItem("permissaoUsuario")
+        }
+    })
         .then(response => response.json())
         .then(dados => {
             dados.forEach(usuario => {

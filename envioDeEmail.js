@@ -11,6 +11,7 @@ document.getElementById('formularioContato').addEventListener('submit', function
 
     if(!regexEmail.test(document.getElementById('email').value)){
         mensagemNaTela("Email inválido!")
+        return;
     }
 
 
